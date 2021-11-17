@@ -1,0 +1,56 @@
+\documentclass[]{IEEEphot}
+\usepackage{setspace}
+
+\pubyear{CS 5300}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+	
+	\title{An Analysis\\ of \\ Branch-and-Bound}
+	
+	\author{Rick Ramirez\\ Ruben Bramasco}
+	
+	\affil{California State Polytechnic University, Pomona}
+	\maketitle
+	\markboth{Fall 2021}{Advanced Algorithm Design and Analysis}
+	\vspace{-2cm}
+	\begin{center}
+    	\includegraphics[width=5cm]{primary-logo-inside-stacked}\\
+    \end{center}
+	\vspace{0.25cm}
+
+	\begin{receivedinfo}%
+
+	\end{receivedinfo}
+	
+	\begin{abstract}
+		\doublespacing\small
+		The Branch-and-Bound paradigm is a widely used framework for solving combinatorial optimization problems.
+		Here we describe the general algorithm and analyze it's time complexity.
+		We follow this with a discussion of recent improvements of the branch-and-bound framework in the wake of quantum computation and describe how a quantum algorithm could produce a quadratic acceleration of the classical time complexity.
+	\end{abstract}
+
+	\begin{IEEEkeywords}
+		Branch-and-Bound, pruning rules, branching strategy.
+	\end{IEEEkeywords}
+
+
+	\input{sections/Introduction}
+	\input{sections/BnbOverview.tex}
+	\input{sections/PruningRules.tex}
+	\input{sections/IntegerConstraint.tex}
+	\input{sections/TSPBetterLowerBound.tex}
+	\input{sections/WhenIsBnBViable.tex}
+	\input{sections/AdvancingBranchAndBound.tex}
+	\input{sections/TSPToIsingModel.tex}
+	\input{sections/QuantumImprovements.tex}
+
+	\bibliographystyle{IEEEtran}
+	\bibliography{groupPaper}
+	
+	%\section*{Biographies}
+	
+	
+\end{document}
