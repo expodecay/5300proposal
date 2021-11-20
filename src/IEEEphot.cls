@@ -1657,7 +1657,7 @@
 \def\appendixname{Appendix}
 \def\abstractname{Abstract}
 % IEEE specific names
-\def\IEEEkeywordsname{Index Terms}
+\def\IEEEkeywordsname{Key Words: }
 \def\IEEEproofname{Proof}
 
 
@@ -2946,7 +2946,7 @@ between column types.}%
 %% 		  {\headertext@blue{\rule{\textwidth}{1pt}}}\vspace*{-25.5pt}\par%
 		  {\headertext@blue{\rule{\textwidth}{.5pt}}}\par\vspace*{-17pt}%
 		  {\headerrule@blue{\rfoot}}\vspace*{-11pt}\par%
-		  {\headertext@blue{\rffont Vol.\ \@jvol,\ No.\ \@jnum,\ \@jmonth\ \@pubyear\hfill Page\ \thepage\par}}}}}%
+		  {\headertext@blue{\rffont \ \@jvol\ \ \@jnum\ \@jmonth\ \@classnumber\hfill Page\ \thepage\par}}}}}%
 	          \let\@evenfoot\@oddfoot}%
 % title page style
 %%%%%%%
@@ -2957,7 +2957,7 @@ between column types.}%
 		  \footrule@blue{\rule{\textwidth}{2pt}}\vspace*{-28pt}\par%
 		  \rule{\textwidth}{.5pt}\par\vspace*{-15.5pt}%
 		  \Footrule@blue{\rfoot}\vspace*{-10pt}\par%
-		  {\whiteink{\rffont Vol.\ \@jvol,\ No.\ \@jnum,\ \@jmonth\ \@pubyear\hfill Page\ \thepage\par}}}}}%
+		  {\whiteink{\rffont Vol.\ \@jvol,\ No.\ \@jnum,\ \@jmonth\ \@classnumber\hfill Page\ \thepage\par}}}}}%
 	          \let\@evenfoot\@oddfoot}%
 % peer review cover page style
 \def\ps@IEEEpeerreviewcoverpagestyle{%
@@ -2993,7 +2993,7 @@ between column types.}%
 %% 		  {\headertext@blue{\rule{\textwidth}{1pt}}}\vspace*{-25.5pt}\par%
 		  {\headertext@blue{\rule{\textwidth}{.5pt}}}\par\vspace*{-16.8pt}%
 		  {\headerrule@blue{\rfoot}}\vspace*{-11pt}\par%
-		  {\headertext@blue{\@jmonth\ \@pubyear\hfill Page\ \thepage\par}}}}}%
+		  {\headertext@blue{\@jmonth\ \@classnumber\hfill Page\ \thepage\par}}}}}%
 	          \let\@evenfoot\@oddfoot}%
 %%%%%%%%%%%%%%%
 % start with empty headings
@@ -4642,7 +4642,7 @@ Use \@IEEEbackslash #2 instead.}}
 %
 \def\jmonth#1{\gdef\@jmonth{#1}}\jmonth{}
 %
-\def\pubyear#1{\gdef\@pubyear{#1}}\pubyear{}
+\def\classnumber#1{\gdef\@classnumber{#1}}\classnumber{}
 %
 \def\authorfont{\fontsize{10}{12}\selectfont\bfseries}
 \def\rfoot{\rule{\textwidth}{10pt}\par}%

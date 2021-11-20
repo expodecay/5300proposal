@@ -1,7 +1,11 @@
 \documentclass[]{IEEEphot}
-\usepackage{setspace}
 
-\pubyear{CS 5300}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{slashbox}
+
+\classnumber{CS 5300}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -10,21 +14,17 @@
 	
 	\title{An Analysis\\ of \\ Branch-and-Bound}
 	
-	\author{Rick Ramirez\\ Ruben Bramasco}
+	\author{Rick Ramirez \\ Ruben Bramasco}
 	
 	\affil{California State Polytechnic University, Pomona}
 	\maketitle
 	\markboth{Fall 2021}{Advanced Algorithm Design and Analysis}
 	\vspace{-2cm}
 	\begin{center}
-    	\includegraphics[width=5cm]{primary-logo-inside-stacked}\\
+    	\includegraphics[width=5cm]{images/primary-logo-inside-stacked}\\
     \end{center}
 	\vspace{0.25cm}
 
-	\begin{receivedinfo}%
-
-	\end{receivedinfo}
-	
 	\begin{abstract}
 		\doublespacing\small
 		The Branch-and-Bound paradigm is a widely used framework for solving combinatorial optimization problems.
@@ -33,7 +33,7 @@
 	\end{abstract}
 
 	\begin{IEEEkeywords}
-		Branch-and-Bound, pruning rules, branching strategy.
+		Branch-and-Bound, Pruning rules, Branching strategy, Ising model, Quantum walk
 	\end{IEEEkeywords}
 
 
@@ -46,9 +46,13 @@
 	\input{sections/AdvancingBranchAndBound.tex}
 	\input{sections/TSPToIsingModel.tex}
 	\input{sections/QuantumImprovements.tex}
-
+	
+	\cite{montanaro2020quantum, kempe2003quantum, lucas2014ising, mitCourse, techie}
 	\bibliographystyle{IEEEtran}
 	\bibliography{groupPaper}
+	\input{sections/appendix.tex}
+	
+	
 	
 	%\section*{Biographies}
 	
