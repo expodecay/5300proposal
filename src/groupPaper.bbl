@@ -21,6 +21,26 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{lucas2014ising}
+A.~Lucas, ``Ising formulations of many np problems,'' \emph{Frontiers in
+  physics}, vol.~2, p.~5, 2014.
+
+\bibitem{schroeder2011thermal}
+D.~V. Schroeder, ``Thermal physics,'' 2011.
+
+\bibitem{ising1925beitrag}
+E.~Ising, ``Beitrag zur theorie des ferromagnetismus,'' \emph{Zeitschrift
+  f{\"u}r Physik}, vol.~31, no.~1, pp. 253--258, 1925.
+
+\bibitem{onsager1944crystal}
+L.~Onsager, ``Crystal statistics. i. a two-dimensional model with an
+  order-disorder transition,'' \emph{Physical Review}, vol.~65, no. 3-4, p.
+  117, 1944.
+
+\bibitem{feynman1972statistical}
+R.~Feynman, ``Statistical mechanics, a set of lectures, california, institute
+  of technology,'' 1972.
+
 \bibitem{montanaro2020quantum}
 A.~Montanaro, ``Quantum speedup of branch-and-bound algorithms,''
   \emph{Physical Review Research}, vol.~2, no.~1, p. 013056, 2020.
@@ -28,10 +48,6 @@ A.~Montanaro, ``Quantum speedup of branch-and-bound algorithms,''
 \bibitem{kempe2003quantum}
 J.~Kempe, ``Quantum random walks: an introductory overview,''
   \emph{Contemporary Physics}, vol.~44, no.~4, pp. 307--327, 2003.
-
-\bibitem{lucas2014ising}
-A.~Lucas, ``Ising formulations of many np problems,'' \emph{Frontiers in
-  physics}, vol.~2, p.~5, 2014.
 
 \bibitem{mitCourse}
 \BIBentryALTinterwordspacing
