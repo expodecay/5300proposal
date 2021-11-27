@@ -1,0 +1,21 @@
+%! Author = rickr
+%! Date = 11/27/2021
+\subsection{Time Independent Schrodinger Equation}
+In quantum mechanics, the Schrodinger equation is a partial differential equation that governs the dynamics of the wave function $\Psi(x,t)$ of a particle in a system. 
+In essence, it is an accounting of energy where the kinetic and potential energy are encapsulated in a single operator called a Hamiltonian, and the total energy of the system is set to be the time derivative acting on the wave function. 
+Since the Ising model focuses on the spin configuration of a particle and neglects the space and time components, we can utilize a time independent version of the Schrodinger equation and treat it as an eigenvalue problem as shown in Equation \ref{eq:tise}. 
+
+\begin{equation}
+	H | \Psi \rangle = E | \Psi \rangle
+	\label{eq:tise}
+\end{equation}
+
+As the Hamiltonian operator acts on the wave function, a scalar value is produced along with the same vector. 
+In terms of linear algebra, the wave function $| \Psi \rangle$ can be treated as an eigenvector with a corresponding eigenvalue $E$. 
+Note that each eigenvalue can correspond to a set of eigenvectors and that minimizing Equation \ref{eq:tise} is to solve for the ground state energy of the system. \\
+
+Relating this back to the Traveling Salesman problem, recall that in Equation \ref{eq:transformation} we transformed the cost function into the same form as the Ising Hamiltonial of Equation \ref{eq:isingHamiltonian}. We now need to map the solution vector of Equation \ref{eq:vector} into qubits to be fed into a quantum computer. 
+\begin{equation}
+	\vec{x} = \langle x_1, x_2, \dots, x_{N^2} \rangle \rightarrow |\Psi\rangle = |x_1\rangle \otimes |x_2\rangle \dots \otimes  |x_{N^2}\rangle 
+\end{equation}
+Note that we do not require a transformation between the energy of the Schrodinger equation and the distance of the Hamiltonian Circuit because both quantities are scalars. This completes the transformation from the Traveling Salesman problem into the Ising model. The solution for the ground state energy of the Ising Hamiltonian corresponds directly to the minimum tour distance in TSP, however, in this form we are able to exploit the features of quantum mechanics and obtain a solution in far less time. 
