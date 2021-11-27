@@ -49,18 +49,14 @@ A.~Montanaro, ``Quantum speedup of branch-and-bound algorithms,''
 J.~Kempe, ``Quantum random walks: an introductory overview,''
   \emph{Contemporary Physics}, vol.~44, no.~4, pp. 307--327, 2003.
 
-\bibitem{mitCourse}
-\BIBentryALTinterwordspacing
-P.~Winston, ``6.034 artificial intelligence,'' \emph{Massachusetts Institute of
-  Technology: MIT OpenCourseWare}, date accessed: 09-2021. [Online]. Available:
-  \url{https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/index.htm}
-\BIBentrySTDinterwordspacing
+\bibitem{packebusch2016low}
+T.~Packebusch and S.~Mertens, ``Low autocorrelation binary sequences,''
+  \emph{Journal of Physics A: Mathematical and Theoretical}, vol.~49, no.~16,
+  p. 165001, 2016.
 
-\bibitem{techie}
-\BIBentryALTinterwordspacing
-``Travelling salesman problem using branch and bound,'' \emph{Techie Delight},
-  date accessed: 09-2021. [Online]. Available:
-  \url{https://www.techiedelight.com/travelling-salesman-problem-using-branch-and-bound/}
-\BIBentrySTDinterwordspacing
+\bibitem{callison2019finding}
+A.~Callison, N.~Chancellor, F.~Mintert, and V.~Kendon, ``Finding spin glass
+  ground states using quantum walks,'' \emph{New Journal of Physics}, vol.~21,
+  no.~12, p. 123022, 2019.
 
 \end{thebibliography}
