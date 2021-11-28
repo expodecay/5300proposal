@@ -21,16 +21,21 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{huang2021branch}
-L.~Huang, X.~Chen, W.~Huo, J.~Wang, F.~Zhang, B.~Bai, and L.~Shi, ``Branch and
-  bound in mixed integer linear programming problems: A survey of techniques
-  and trends,'' \emph{arXiv preprint arXiv:2111.06257}, 2021.
-
 \bibitem{morrison2016branch}
 D.~R. Morrison, S.~H. Jacobson, J.~J. Sauppe, and E.~C. Sewell,
   ``Branch-and-bound algorithms: A survey of recent advances in searching,
   branching, and pruning,'' \emph{Discrete Optimization}, vol.~19, pp. 79--102,
   2016.
+
+\bibitem{huang2021branch}
+L.~Huang, X.~Chen, W.~Huo, J.~Wang, F.~Zhang, B.~Bai, and L.~Shi, ``Branch and
+  bound in mixed integer linear programming problems: A survey of techniques
+  and trends,'' \emph{arXiv preprint arXiv:2111.06257}, 2021.
+
+\bibitem{virdi2020development}
+N.~Virdi, ``Development of a connected and autonomous vehicle modelling
+  framework, with implementation in evaluating transport network impacts and
+  safety,'' Ph.D. dissertation, University of New South Wales, 2020.
 
 \bibitem{cormen2009introduction}
 T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, \emph{Introduction
