@@ -2,3 +2,27 @@
 %! Date = 11/17/2021
 
 \subsection{Pruning Rules}
+	While the use of a heuristic allows us to approximate the utility of a state without performing a complete search, pruning rules allow us to neglect portions of the tree without affecting the final choice. 
+	Many of the pruning techniques are developed in the context of Artificial Intelligence, however the basic function holds across all applications involving combinatorial optimization. 
+	\subsubsection{Lower-Bound}
+		Producing a lower bound on the objective function at each node is the most common way to prune a search space \cite{morrison2016branch}. 
+		The lower bound then used to prune sub-problems who's lower bound is no better than the incumbent solution. 
+		The value of the lower bound is calculated by relaxing aspects of the problem, and as such, some lower bound calculations may be easier to determine than others. 
+		The general technique is to attempt pruning with a lower bound that is easy to calculate before moving on to more complex (but possibly tighter) lower bounds. 
+	\subsubsection{Alpha-Beta Pruning}
+		Alpha-beta pruning is often used in areas of artificial intelligence that employ a MinMax decision rule for minimizing the possible loss of a worst case scenario. 
+		The idea is to maximize the minimum gain, however, issues arise when the number of game states to examine is exponential in the depth of the tree. 
+		Alpha-beta pruning, while not eliminating the exponent, effectively cuts it in half by assigning a numerical score to each terminal node \cite{russell2010artificial}. 
+		Each terminal node represents the outcome of the player with the next move.
+		The technique is referred to as an adversarial search algorithm because the game tree can represent many two-player zero-sum games. 
+		Two values $\alpha$ and $\beta$ represent the minimum score that the maximizing player is assured of, and maximum score that the minimizing player is assured of. 
+		When the value of a terminal node results in $\beta$ being less than $\alpha$, the maximizing player may ignore descendants of the node.  
+	\subsubsection{Decision Tree Pruning}
+		For some problems, it is found that decision-tree learning algorithms can generate large trees with no inherent pattern. This can happen when too many irrelevant features are fed into the training model. 
+		For example, when measuring the outcome of a tossed coin, the color, time of day, the exact person doing the flipping, have no effect on the outcome. 
+		However, if the model is provided these features as input, then the training could be subject to over-fitting. 
+		In general, over-fitting is more likely to occur when the hypothesis space and number of input attributes grows \cite{russell2010artificial}. 
+		To combat this, we use decision-tree pruning. 
+		The general idea is that we start with a full tree and look at a test node whose descendants are only leaf nodes. 
+		If testing detects only noise in the data, then we eliminate the node and replace it with the leaf node. 
+	

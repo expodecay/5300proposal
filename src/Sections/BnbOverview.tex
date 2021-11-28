@@ -2,8 +2,27 @@
 %! Date = 11/17/2021
 \newpage
 \section{Basic Idea Behind BnB}
-	
-		\input{Subsections/BnbOverview/search.tex}
+		\begin{algorithm}[H]
+			\caption{Branch-and-Bound($X$,$f$) \cite{huang2021branch}}
+			\begin{algorithmic}[1]
+				\State Set L = \{$X$\} and initialize $\hat{x}$
+				\While{L != $\emptyset$}
+					\State Select a sub-problem $S$ from $L$ to explore
+					\If{a solution $\hat{x}' \in \{x\in S \: | \: f(x) < f(\hat{x})\}$ can be found} 
+					\State Set $\hat{x} = \hat{x}'$
+					\EndIf
+					\If{$S$ cannot be pruned}
+					\State Partition $S$ into $S_1, S_2 \dots ,S_r$
+					\State Insert $S_1, S_2 \dots ,S_r$ into $L$
+					\EndIf
+					\State Remove $S$ from $L$
+				\EndWhile
+				\State \Return $\hat{x}$
+			\end{algorithmic}
+		\label{alg: pseudocode}
+		\end{algorithm}
 
+		\input{Subsections/BnbOverview/search.tex}
 		\input{subsections/BnbOverview/PruningRules.tex}
+		\input{subsections/BnbOverview/branching.tex}
 		

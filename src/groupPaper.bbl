@@ -21,6 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{huang2021branch}
+L.~Huang, X.~Chen, W.~Huo, J.~Wang, F.~Zhang, B.~Bai, and L.~Shi, ``Branch and
+  bound in mixed integer linear programming problems: A survey of techniques
+  and trends,'' \emph{arXiv preprint arXiv:2111.06257}, 2021.
+
 \bibitem{morrison2016branch}
 D.~R. Morrison, S.~H. Jacobson, J.~J. Sauppe, and E.~C. Sewell,
   ``Branch-and-bound algorithms: A survey of recent advances in searching,
@@ -30,6 +35,10 @@ D.~R. Morrison, S.~H. Jacobson, J.~J. Sauppe, and E.~C. Sewell,
 \bibitem{cormen2009introduction}
 T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, \emph{Introduction
   to algorithms}.\hskip 1em plus 0.5em minus 0.4em\relax MIT press, 2009.
+
+\bibitem{russell2010artificial}
+S.~Russell and P.~Norvig, ``Artificial intelligence: A modern approach. third
+  edit,'' \emph{Prentice Hall. doi}, vol.~10, pp. B978--012\,161\,964, 2010.
 
 \bibitem{lucas2014ising}
 A.~Lucas, ``Ising formulations of many np problems,'' \emph{Frontiers in
