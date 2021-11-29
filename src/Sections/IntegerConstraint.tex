@@ -1,4 +1,27 @@
 %! Author = rickr
 %! Date = 11/17/2021
-
 \section{Integer Constraint Problems}
+    One of the many types of problems that can be solved by 
+    branch-and-bound are Integer Constraint Problems. 
+    Integer Constraint Problems at their core are combinatorial 
+    optimization problems, thus can be solved by branch-and-bound.
+    For this example we will use a system of equations problem,
+    apply an integer constraint, and show how it can be solved using 
+    branch-and-bound. 
+    \\ 
+    \noindent
+	\textbf{\underline{System of Equations Problem}:}\\
+	\underline{Instance}: \\ $Z = 3x + 2y$  \\ $5x = 6y \leq 45$ \\ $4x + 7y \leq 42 $ \\
+	\underline{Question}: What is the best assignment of $x$ and $y$ such that $Z$ is maximized?
+    \\
+
+        \subsubsection{Creating an Upper-Bound}
+        First thing we must notice about Integer Constraint problems is that
+        their solution space is smaller than their non-constrained counterparts.
+        We can exploit this and create an upper-bound. To create the upper bound
+        we will relax the integer constraint and solve the relaxed problem.
+        Solving the system of equations we get the following: $x^{'} = 5.73$, $y^{'} = 2.73$, 
+        and $Z^{'} = 22.65$. We notice that the integer constraint solution
+        space is a subset of the relaxed solution space, therefore the largest
+        possible value of $Z$ when applying the integer constraint is 
+        $ Z = \lfloor Z^{'} \rfloor = 22$. This will now be our upper-bound ($UP$).
