@@ -34,10 +34,11 @@ Each edge $uv$ has a weight $W_{uv}$ associated with it.
 			
 			\draw [](40, -35) node [left] {$7$};
 		\end{tikzpicture}
-		\caption{A graph G representing an instance of the Traveling Salesman Problem. Each node $V$ is connected via a weighted edge $E=W_{uv}$.}
+		\caption{\doublespacing A graph G representing an instance of the Traveling Salesman Problem. Each node $V$ is connected via a weighted edge $E=W_{uv}$.}
 		\label{fig:tsp}
 	\end{center}
-\end{figure}\\
+\end{figure}
+
 The set of solutions to this graph can be seen in Table \ref{tab:eigenset} located in the appendix and the shortest Hamiltonian cycle that can be taken has a total distance of 18.
 One possible route is $2\rightarrow3\rightarrow1\rightarrow0$. 
 This route can be represented as a matrix as shown if Figure \ref{fig:matrix}, where $i$ and $p$ correspond to the city and order of traversal respectively. 
@@ -54,8 +55,9 @@ This route can be represented as a matrix as shown if Figure \ref{fig:matrix}, w
 			
 			3& 0&1&0&0\\
 		\end{tabular}
-	\end{center}\caption{Solution to TSP in Figure \ref{fig:tsp} represented in the form of a matrix. The column $i$ represents each node, and the row $p$ corresponds to the nodes position in the traversal. A decision variable value of 1 corresponds to the path being taken.}\label{fig:matrix}
-\end{figure}\\
+	\end{center}\caption{\doublespacing Solution to TSP in Figure \ref{fig:tsp} represented in the form of a matrix. The column $i$ represents each node, and the row $p$ corresponds to the nodes position in the traversal. A decision variable value of 1 corresponds to the path being taken.}\label{fig:matrix}
+\end{figure}
+
 The solution matrix of Figure \ref{fig:matrix} can be unpacked into the form of a vector 
 \begin{equation}
 	\vec{x} = \langle x_1, x_2, \dots, x_{N^2} \rangle
@@ -79,6 +81,7 @@ This amounts to the two constraints given in Equation \ref{eq:constraints}.
 	\sum_p x_{i,p}=1 \quad \forall \: i \in cities \quad \text{and} \quad \sum_i x_{i,p}=1 \quad \forall \: p \in route
 	\label{eq:constraints}
 \end{equation}
+
 By imposing these constraints to Equation \ref{eq:cost}, we find that the objective function to be minimized takes the form
 % Distance with constraints
 \begin{equation}

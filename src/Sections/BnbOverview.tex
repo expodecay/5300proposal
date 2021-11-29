@@ -1,6 +1,5 @@
 %! Author = rickr
 %! Date = 11/17/2021
-\newpage
 \section{Basic Idea Behind BnB}
 	The branch-and-bound framework is a set of techniques that encapsulates a family of algorithms that share a common solution procedure. 
 	The pseudo-code for a general branch-and-bound paradigm can be seen in Algorithm \ref{alg: pseudocode} where, for an optimization problem $\mathscr{P}=(X,f)$, $X$ is the search space of valid solutions and $f: X \rightarrow \mathbb{R}$ is the objective function. 
@@ -12,7 +11,7 @@
 	When the set of unexplored sub-problems is exhausted ($L = \emptyset$), the best incumbent is returned. 
 	Since sub-problems are discarded if they contain no solution better than $\hat{x}$, it must be the case that $\hat{x} = x^*$ \cite{morrison2016branch, huang2021branch,virdi2020development}.
 		\begin{algorithm}[H]
-			\caption{Branch-and-Bound($X$,$f$) \cite{huang2021branch}}
+			\caption{Branch-and-Bound($X$,$f$) }
 			\begin{algorithmic}[1]
 				\State Set L = \{$X$\} and initialize $\hat{x}$
 				\While{L != $\emptyset$}
@@ -30,7 +29,8 @@
 			\end{algorithmic}
 		\label{alg: pseudocode}
 		\end{algorithm}
-
+	\noindent
+		The user is free to choose which searching strategy, branching strategy, and pruning rules to utilize when employing branch-and-bound, but the nature of the problem at hand must be considered to obtain optimal performance. Here we explore the three sub-routines individually and examine cases where different variations are appropriate. 
 		\input{Subsections/BnbOverview/search.tex}
 		\input{subsections/BnbOverview/PruningRules.tex}
 		\input{subsections/BnbOverview/branching.tex}

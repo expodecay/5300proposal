@@ -2,4 +2,8 @@
 %! Date = 11/17/2021
 
 \section{Advancing Branch And Bound}
-	
+	The three main components of Algorithm \ref{alg: pseudocode} (searching, pruning and branching) are generally left unspecified and interchanged by the user.
+	Each of these areas has a significant impact on performance and substantial research has been done to develop them individually even though the branch-and-bound framework has remained largely unchanged. 
+	Three viable research directions that can improve performance further are, the formulation of new search strategies, an analysis of how branching affects search and verification phases, and the development of a unified pruning rules. 
+	Most work has been focused on the development of pruning rules which has improved the verification phase significantly, however branching and searching strategies remain open for refinement \cite{morrison2016branch}. 
+	In the following sections we examine modern techniques in quantum computing and explore how they can be applied to the branch-and-bound framework to increase the search time of NP-complete problems. 

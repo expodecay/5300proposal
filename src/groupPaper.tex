@@ -1,4 +1,4 @@
-\documentclass[]{IEEEphot}
+\documentclass[11pt]{IEEEphot}
 
 \usepackage{setspace}
 \usepackage{tikz}
@@ -6,12 +6,14 @@
 \usepackage{slashbox}
 \usepackage{algorithm,algpseudocode}
 \usepackage{mathrsfs}
+\usepackage{setspace}
 
 \classnumber{CS 5300}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 
+\doublespacing
 \begin{document}
 	
 	\title{An Analysis\\ of \\ Branch-and-Bound}
@@ -30,8 +32,10 @@
 	\begin{abstract}
 		\doublespacing\small
 		The Branch-and-Bound paradigm is a widely used framework for solving combinatorial optimization problems.
-		Here we describe the general algorithm and analyze it's time complexity.
-		We follow this with a discussion of recent improvements of the branch-and-bound framework in the wake of quantum computation and describe how a quantum algorithm could produce a quadratic acceleration of the classical time complexity.
+		Here we describe the general algorithm and show how it can be broken into various sub-routines. 
+		For each sub-routine, we describe when it is appropriate to use it and analyze it's effect on performance.
+		We follow this with two applications involving an integer constraint problem and the traveling salesman problem. 
+		Finally, we close with a discussion of recent improvements of the branch-and-bound framework in the wake of quantum computation and describe how a quantum algorithm could produce a quadratic acceleration of the classical time complexity.
 	\end{abstract}
 
 	\begin{IEEEkeywords}
@@ -46,8 +50,6 @@
 	
 	\input{sections/TSPBetterLowerBound.tex}
 	
-	\input{sections/WhenIsBnBViable.tex}
-	
 	\input{sections/AdvancingBranchAndBound.tex}
 	
 	\input{sections/TSPToIsingModel.tex}
@@ -56,7 +58,7 @@
 	
 	\input{sections/Conclusion.tex}
 	
-	\newpage
+	
 	\bibliographystyle{IEEEtran}
 	\bibliography{groupPaper}
 	

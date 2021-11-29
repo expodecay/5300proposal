@@ -1,4 +1,13 @@
 %! Author = rickr
 %! Date = 11/27/2021
 \subsection{Branching Strategies}
-	The branching strategy affects the number of children and the way the sub-problems generated in Algorithm \ref{alg: pseudocode} are partitioned. 
+	The branching strategy affects the number of children and the way the sub-problems of Algorithm \ref{alg: pseudocode} are partitioned. 
+	In general, an appropriate branching strategy can limit the number of decisions that are made.
+	This can lead to a significant reduction in the search space. 
+	Two common types of branching strategies are binary branching and wide branching \cite{morrison2016branch}.
+	
+	\subsubsection{Binary Branching}
+		Binary branching focuses on dividing $S$ from Algorithm 1 into two mutually exclusive sub-problems. This technique is commonly seen in problems like the knapsack problem which seeks a selection of items that maximize cost. In this case, we select some unassigned item and create two branches, one where the item is included in the set, and another where it is not. 
+	
+	\subsubsection{Non-Binary Branching}
+		Non-binary branching focuses on selecting a singe element from a set of options. This is often used in problems such as the maximum cliques where a set of unused vertices is maintained for each sub-problem and each vertex generates a child set. Non-binary branching allows for potentially large reductions in the search tree by bypassing long sequences of sub problems. 

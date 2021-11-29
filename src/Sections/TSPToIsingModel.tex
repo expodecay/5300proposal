@@ -1,8 +1,8 @@
 %! Author = rickr
 %! Date = 11/17/2021
-\newpage
+
 \section{Traveling Salesman Problem To Ising Model}
-	Recent interest in solving NP-complete and NP-hard problems via adiabatic quantum optimization has led to convenient transformations of Ising formulations. 
+	Recent interest in solving NP-complete problems via adiabatic quantum optimization has led to convenient transformations of Ising formulations. 
 	The idea is that if one problem has a quantum Hamiltonian $H_p$ whose ground state energy encodes the solution to a problem of interest, and another Hamiltonian $H_0$, whose ground state is "easy" to find and prepare, then we can prepare the system to be in the ground state of $H_0$ before adiabatically changing it in terms of $H_p$ for a time $T$ \cite{lucas2014ising}. 
 	So long as $T$ is large enough and $H_0$ and $H_p$ do not commute, the system should remain in the resulting ground state for all time. 
 	Therefore, measuring the ground state of the system at time $T$ will return a solution to the problem of interest. 

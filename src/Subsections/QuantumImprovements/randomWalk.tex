@@ -23,15 +23,16 @@ It can be shown the after $n$ steps, the quantum walk obtains a variance of
 Therefore, the quantum walk propagates quadratically faster than the classical walk, and this speed increase can be applied to the branch-and-bound framework. 
 From Figure \ref{fig:quantumWalk}, if the wave-function is placed in a superposition, then the distribution exhibits destructive interference about the origin.
 However, if the wave-function begins in a pure spin-up or spin-down configuration, then it is possible to create a bias toward any particular direction as shown in Figure \ref{fig:biasWalk} of the appendix.
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=12cm]{images/afunc2}
 	\end{center}
-	\caption{Difference between quantum and classical random walk. The blue dotted line represents the Gaussian distribution created by the classical walk and has a variance $\sigma^2 \propto n$. The black distribution is the result of the quantum random walk where the initial wave-function placed into a superposition $|\Psi\rangle = \alpha|0\rangle + \beta|1\rangle$ and acted on my a balanced Hadamard coin. The quantum distribution exhibits a variance of $\sigma^2 \propto n$ with de-constructive interference about the origin and constructive interference at the edges of propagation.}
+	\caption{\doublespacing Difference between quantum and classical random walk. The blue dotted line represents the Gaussian distribution created by the classical walk and has a variance $\sigma^2 \propto n$. The black distribution is the result of the quantum random walk where the initial wave-function placed into a superposition $|\Psi\rangle = \alpha|0\rangle + \beta|1\rangle$ and acted on my a balanced Hadamard coin. The quantum distribution exhibits a variance of $\sigma^2 \propto n$ with de-constructive interference about the origin and constructive interference at the edges of propagation.}
 	\label{fig:quantumWalk}
-\end{figure}\\
+\end{figure}
+\noindent
 To summarize the results, consider three individual cases of solving combinatorial problems with Hamiltonians similar to that of Equation \ref{eq:isingHamiltonian}.
 One case is solved using classical branch-and-bound techniques, one is solved using quantum walks, and one is solved using branch-and-bound in a quantum setting. 
 If the classical branch-and-bound techniques are applied to solve for the largest known ground states of the Beransconi model, the runtime is roughly $O(2^{0.79n})$ \cite{packebusch2016low}. 
 If we apply a quantum walk to classical algorithms that solve the Sherrington-Kirkpatrick model (an Ising model with long range anti-ferrmagnetic couplings) then it has been shown we can increase runtime to approximately $O(2^{0.41n})$ \cite{callison2019finding}. 
-Finally, by applying quantum branch-and-bound algorithms to the same model, it has been shown the runtime can be increased further to $O(2^{0.226})$ \cite{montanaro2020quantum}.
+Finally, by applying quantum branch-and-bound algorithms to the same model, it has been shown that the runtime can be increased further to $O(2^{0.226n})$ \cite{montanaro2020quantum}.
