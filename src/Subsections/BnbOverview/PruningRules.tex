@@ -25,5 +25,12 @@
 		In general, over-fitting is more likely to occur when the hypothesis space and number of input attributes grows \cite{russell2010artificial}. 
 		To combat this, we use decision-tree pruning. 
 		The general idea is that we start with a full tree and look at a test node whose descendants are only leaf nodes. 
-		If testing detects only noise in the data, then we eliminate the node and replace it with the leaf node. 
-	
+		If testing detects only noise in the data, then we eliminate the node and replace it with the leaf node.
+	\subsubsection{Upper-Bound}
+		Many problems have large solution spaces, and while a lower bound is helpful in narrowing
+		down a solution spaces, an upper-bound can narrow the solution space further.
+		An upper-bound represents the upper limit of the solution space, it means that any
+		problem in the solution space can not be better than a given upper-bound.
+		Knowing the upper-bound of a problem instance can help cut down extra computation,
+		since if the bound is hit, we know we have an optimal solution, and we can stop
+		searching.
