@@ -168,14 +168,14 @@
 		\subsubsection{Depth-First}
 			The depth-first search strategy follows a last-in, first-out order and is implemented by maintaining a list of unexplored nodes in a stack as shown in Figure \ref{fig:searchTechniques} (a). 
 			The routine removes the top element from the stack to explore for the next sub-problem and the children generated are inserted on the top of the stack. The potential memory requirements needed to maintain a list of children nodes can become a problem, however we remedy this by maintaining a path of indices from the root to the current node instead of the entire list of unexplored sub-problems.
-			When the current sum-problem is complete, the algorithm selects the next unexplored node for exploration and if one does not exist, the algorithm backtracks to the nearest ancestor node. 
+			When the current sub-problem is complete, the algorithm selects the next unexplored node for exploration and if one does not exist, the algorithm backtracks to the nearest ancestor node. 
 			The biggest issue with this technique is that it is blind to the structure of the problem and makes no use of the lower bounds encountered during a traversal. 
 			This can cause the algorithm to spend large amounts of time exploring unpromising regions, especially when the search space is unbalanced. 
 			This results in a running time of $\Theta (V+E)$ \cite{cormen2009introduction}, however DFS yields valuable information about the structure of a graph.
 		\subsubsection{Breadth-First}
 			The breadth-first search strategy, shown in Figure \ref{fig:searchTechniques} (b), explores nodes based on a first-in, first-out order and is implemented by maintaining a queue data structure. 
 			This results in the algorithm exploring all nodes at the same level before moving on to deeper portions of the tree. 
-			The advantage of this technique is that if the optimal solution is close to the root, or the tree is unbalanced, breadth-first search will find the solution faster that depth-first. 
+			The advantage of this technique is that if the optimal solution is close to the root, or the tree is unbalanced, breadth-first search will find the solution faster than depth-first. 
 			However, if the solution occurs at lower depths, breadth-first can require large amounts of memory because it does not take advantage of any pruning rules. 
 			The BFS technique runs on a running time of $O(V+E)$ \cite{cormen2009introduction} and is linear to the size of an adjacency list representation of the graph.
 		\subsubsection{Best-First}

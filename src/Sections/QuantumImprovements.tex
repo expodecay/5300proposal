@@ -3,7 +3,7 @@
 \section{Quantum Improvements}
 	With the recent advancements in quantum computing, access to hardware has become readily available to the general public and quantum algorithms have been shown to perform exponentially better than some of their classical counterparts for select problems. 
 	For example, Grover's algorithm can sort through and find an element within an unstructured set using $O(\sqrt{N})$ operations as oppose to the $O(N)$ performance of an exhaustive search. However, for many problems, it's is more beneficial to utilize techniques found in classical algorithms that take advantage of the structure of a problem. One such technique is Branch-and-bound. 
-	By applying the Branch-and-Bound paradigm in a quantum setting, it is possible to achieve a near quadratic improvement beyond that of classical pruning techniques \cite{montanaro2020quantum}. \\
+	By applying the Branch-and-Bound paradigm in a quantum setting, it is possible to achieve a near quadratic improvement beyond that of classical pruning techniques \cite{montanaro2020quantum}. 
 
 	Though there are several different implementations of quantum computing systems, the most popular is the quantum circuit.
 	The model is based on the concept of a qubit which is analogous to the bit in classical computing. 
@@ -16,6 +16,7 @@
 		\label{eq:spinStates}
 	\end{equation}
 	where $\alpha$ and $\beta$ are probability amplitudes such that $|\alpha|^2+|\beta|^2 = 1$.
+	It is only when the wave-function is measured that it actually collapse in a definite value of $|0 \rangle$ or $|1\rangle$.
 	This means that unlike a classical bit that can discretely take on a value of $0$ \textit{or} $1$, the qubit can exist in a state of $0$ \textit{and} $1$ simultaneously. We can exploit this feature of quantum mechanics to increase the speed of classical algorithms by placing the qubit into a superposition of states and letting the system evolve in time before taking a measurement. 
 	
 	\input{Subsections/QuantumImprovements/randomWalk.tex}

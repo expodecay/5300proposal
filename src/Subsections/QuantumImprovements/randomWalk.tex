@@ -15,14 +15,15 @@ Now consider a random walk in a quantum setting.
 In this case, the randomness comes from the quantum superposition imposed by Equation \ref{eq:spinStates}, a reversible unitary evolution (typically in the form of a Hadamard coin), and a collapse of the wave-function when a measurement is actually taken. 
 Another difference between the quantum and classical random walk is the time at which a measurement is taken. 
 In the classical version, it makes no difference to take measurements at each iteration, however in the quantum version, if a measurement of the wave-function is taken at each iteration, then the distribution converges to the classical Gaussian form. 
-If the wave-function is left to interfere with itself before a measurement is taken, then the probability distribution is much more intricate, as can be seen in Figure \ref{fig:quantumWalk}.
+However, if the wave-function is left to interfere with itself before a measurement is taken, then the probability distribution is much more intricate, as can be seen in Figure \ref{fig:quantumWalk}.
 It can be shown the after $n$ steps, the quantum walk obtains a variance of 
 \begin{equation}
 	\sigma^2 \propto n^2 \quad\cite{kempe2003quantum}
 \end{equation}
 Therefore, the quantum walk propagates quadratically faster than the classical walk, and this speed increase can be applied to the branch-and-bound framework. 
 From Figure \ref{fig:quantumWalk}, if the wave-function is placed in a superposition, then the distribution exhibits destructive interference about the origin.
-However, if the wave-function begins in a pure spin-up or spin-down configuration, then it is possible to create a bias toward any particular direction as shown in Figure \ref{fig:biasWalk} of the appendix.
+However, if the wave-function begins in a pure spin-up or spin-down configuration, then it is possible to create a bias toward any particular direction as shown in Figure \ref{fig:biasWalk} of the appendix. 
+Therefore, we can still utilize the heuristic methods found in the classical branch-and-bound technique. 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=13cm]{images/afunc2}
@@ -32,7 +33,7 @@ However, if the wave-function begins in a pure spin-up or spin-down configuratio
 \end{figure}
 \noindent
 To summarize the results, consider three individual cases of solving combinatorial problems with Hamiltonians similar to that of Equation \ref{eq:isingHamiltonian}.
-One case is solved using classical branch-and-bound techniques, one is solved using quantum walks, and one is solved using branch-and-bound in a quantum setting. 
+One case is solved using the classical branch-and-bound technique, one is solved using a quantum walk, and one is solved using branch-and-bound in a quantum setting. 
 If the classical branch-and-bound techniques are applied to solve for the largest known ground states of the Beransconi model, the runtime is roughly $O(2^{0.79n})$ \cite{packebusch2016low}. 
-If we apply a quantum walk to classical algorithms that solve the Sherrington-Kirkpatrick model (an Ising model with long range anti-ferrmagnetic couplings) then it has been shown we can increase runtime to approximately $O(2^{0.41n})$ \cite{callison2019finding}. 
+If we apply a quantum walk to classical algorithms that solve the Sherrington-Kirkpatrick model (an Ising model with long range anti-ferrmagnetic couplings) then it has been shown that we can increase runtime to approximately $O(2^{0.41n})$ \cite{callison2019finding}. 
 Finally, by applying quantum branch-and-bound algorithms to the same model, it has been shown that the runtime can be increased further to $O(2^{0.226n})$ \cite{montanaro2020quantum}.

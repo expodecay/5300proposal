@@ -7,17 +7,17 @@
 	Many of the pruning techniques are developed in the context of Artificial Intelligence, however the basic function holds across all applications involving combinatorial optimization. 
 	\subsubsection{Lower-Bound}
 		Producing a lower bound on the objective function at each node is the most common way to prune a search space \cite{morrison2016branch}. 
-		The lower bound then used to prune sub-problems who's lower bound is no better than the incumbent solution. 
+		The lower bound is used to discard sub-problems who's lower bound is no better than the incumbent solution. 
 		The value of the lower bound is calculated by relaxing aspects of the problem, and as such, some lower bound calculations may be easier to determine than others. 
 		The general technique is to attempt pruning with a lower bound that is easy to calculate before moving on to more complex (but possibly tighter) lower bounds. 
 	\subsubsection{Upper-Bound}
 		Many problems have large solution spaces, and while a lower bound is helpful in narrowing
 		down a solution spaces, an upper-bound can narrow the solution space further.
-		An upper-bound represents the upper limit of the solution space, it means that any
+		An upper-bound represents the upper limit of the solution space, imposes the constraint that any
 		problem in the solution space can not be better than a given upper-bound.
 		Knowing the upper-bound of a problem instance can help cut down extra computation,
 		since if the bound is hit, we know we have an optimal solution, and we can stop
-		searching. It is important to mention that having an upperbound does not 
+		searching. It is important to mention that having an upper-bound does not 
 		mean that there exist a solution that equals the upper bound, it simply means 
 		there can not be one better.
 		
@@ -27,11 +27,11 @@
 		Alpha-beta pruning, while not eliminating the exponent, effectively cuts it in half by assigning a numerical score to each terminal node \cite{russell2010artificial}. 
 		Each terminal node represents the outcome of the player with the next move.
 		The technique is referred to as an adversarial search algorithm because the game tree can represent many two-player zero-sum games. 
-		Two values $\alpha$ and $\beta$ represent the minimum score that the maximizing player is assured of, and maximum score that the minimizing player is assured of. 
+		Two values $\alpha$ and $\beta$ represent the minimum score that the maximizing player is assured of, and maximum score that the minimizing player is assured of respectively. 
 		When the value of a terminal node results in $\beta$ being less than $\alpha$, the maximizing player may ignore descendants of the node.  
 	\subsubsection{Decision Tree Pruning}
 		For some problems, it is found that decision-tree learning algorithms can generate large trees with no inherent pattern. This can happen when too many irrelevant features are fed into the training model. 
-		For example, when measuring the outcome of a tossed coin, the color, time of day, the exact person doing the flipping, have no effect on the outcome. 
+		For example, when measuring the outcome of a tossed coin, the color, time of day, the exact person doing the flipping, etc.,  have no effect on the outcome. 
 		However, if the model is provided these features as input, then the training could be subject to over-fitting. 
 		In general, over-fitting is more likely to occur when the hypothesis space and number of input attributes grows \cite{russell2010artificial}. 
 		To combat this, we use decision-tree pruning. 
