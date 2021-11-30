@@ -32,7 +32,25 @@
         \subsubsection{Combinations}
         Now we need to turn our problem into a combinatorial optimization problem.
         To do this, we need to notice that, graphically, the solution in the continuous space is at 
-        the intersection of the two lines. Therefore, when applying the integer constraint our
+        the intersection of the two lines.\\
+        
+        \begin{figure}[H]
+            \begin{center}
+                \begin{tikzpicture}
+                    \begin{axis}[xlabel=$x$,ylabel=$y$,
+                    xmin=0,xmax=7,ymin=0,ymax=7, axis lines=center, axis equal]
+                    
+                        \addplot[domain=-10:10, color=black,]{(45/6)-(5/6)*x};
+                        
+                        \addplot[domain=-10:10, color=black,]{(42/7) - (4/7)*x};
+                    
+                    \end{axis}
+                \end{tikzpicture}
+            \end{center}
+            \caption{An example of a system of linear equations.}
+        \end{figure}
+        
+        Therefore, when applying the integer constraint our
         solution will be near the intersection. To generate all the solution combinations we will 
         use two operations, the floor ($\lfloor \rfloor$) and ceiling ($\lceil \rceil$) operation. 
         For example, take the solution pair in the continuous space $x^{'}$ and $y^{'}$,
