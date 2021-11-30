@@ -18,18 +18,25 @@
     a graph adjacency matrix, and reduce it. There are two reasons for the reduction, 
     the first is that reduction keeps track of our current state of the tour, and the second
     is that the cost of reduction is an admissiable heuristic in the TSP problem.
+    The idea is that the cost of reduction is equal to the shortest possible edges left to 
+    take on the graph. Note, the shortest edges do not have to be constrainted to the tour, they
+    are just simply the shortest edges coming out of each node. To compute the reduction, take the
+    shortest number in each row, then subtract it from each element, finally sum the shortest edges.
+    The outputed matrix becomes the new state of the child branch and used to compute it's lower-bound.\\
+
     After computing the reduction cost we can now make our lower bound calculation.
     \begin{equation}
         LB = LB_p + w(p, n) + R(M_n)
     \end{equation}
     Where $LB_p$ is the lower-bound of the parent, $w(p, n)$ is the weight of the edge
-    between the parent, and $R(M_n)$ is the cost of reduction. 
+    between the parent, and $R(M_n)$ is the cost of reduction. \\
     
     It is important to realize that branch and bound is not one size fits all algorithm, so
     although there maybe a problem that can be encoded with an adjacency matrix, it does not mean
     there exist an admissiable heuristic for it. 
 
    
+    
     \begin{vmatrix}
         $\infty$ & 9 & 2 & 8\\
         9 & $\infty$ & 7 & 3 \\
