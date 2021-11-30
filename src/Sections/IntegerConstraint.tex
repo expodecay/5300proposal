@@ -20,7 +20,7 @@
         First thing we must notice about Integer Constraint problems is that
         their solution space is smaller than their continuous counterparts and 
         is in fact a subset.
-        We can exploit this and create an upper-bound. To create the upper bound
+        We can exploit this and create an upper-bound. To create the upper-bound
         we will relax the integer constraint and solve the relaxed problem.
         Solving the system of equations we get some optimal values: $x^{'}$, $y^{'}$, 
         and $Z^{'}$. We notice that the integer constraint solution
@@ -29,15 +29,14 @@
         $ Z = \lfloor Z^{'} \rfloor$. This will now be our upper-bound ($UP$), which can be used
         to find the optimal solution.
 
-
         \subsubsection{Combinations}
         Now we need to turn our problem into a combinatorial optimization problem.
         To do this, we need to notice that, graphically, the solution in the continuous space is at 
         the intersection of the two lines. Therefore, when applying the integer constraint our
-        solution will be near the interception. To generate all the solution combinations we will 
+        solution will be near the intersection. To generate all the solution combinations we will 
         use two operations, the floor ($\lfloor \rfloor$) and ceiling ($\lceil \rceil$) operation. 
         For example, take the solution pair in the continuous space $x^{'}$ and $y^{'}$,
-        applying the floor and ceiling,to each we get the candidate integer constraint solutions:  
+        applying the floor and ceiling to each, we get the candidate integer constraint solutions:  
         $(\lceil x^{'} \rceil, \lceil y^{'} \rceil)$, $(\lfloor x^{'} \rfloor, \lceil y^{'} \rceil)$
         $(\lceil x^{'} \rceil, \lfloor y^{'} \rfloor)$, $(\lfloor x^{'} \rfloor, \lfloor y^{'} \rfloor)$.
         Each floor and ceil operation that we do will be a new constraint or equation on the problem,
