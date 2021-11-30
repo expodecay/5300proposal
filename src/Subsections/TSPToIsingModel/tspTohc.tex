@@ -38,7 +38,6 @@ Each edge $uv$ has a weight $W_{uv}$ associated with it.
 		\label{fig:tsp}
 	\end{center}
 \end{figure}
-
 The set of solutions to this graph can be seen in Table \ref{tab:eigenset} located in the appendix and the shortest Hamiltonian cycle that can be taken has a total distance of 18.
 One possible route is $2\rightarrow3\rightarrow1\rightarrow0$. 
 This route can be represented as a matrix as shown if Figure \ref{fig:matrix}, where $i$ and $p$ correspond to the city and order of traversal respectively. 
@@ -57,7 +56,6 @@ This route can be represented as a matrix as shown if Figure \ref{fig:matrix}, w
 		\end{tabular}
 	\end{center}\caption{\doublespacing Solution to TSP in Figure \ref{fig:tsp} represented in the form of a matrix. The column $i$ represents each node, and the row $p$ corresponds to the nodes position in the traversal. A decision variable value of 1 corresponds to the path being taken.}\label{fig:matrix}
 \end{figure}
-
 The solution matrix of Figure \ref{fig:matrix} can be unpacked into the form of a vector 
 \begin{equation}
 	\vec{x} = \langle x_1, x_2, \dots, x_{N^2} \rangle
