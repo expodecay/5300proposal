@@ -7,7 +7,7 @@
 	Two common types of branching strategies are binary branching and wide branching \cite{morrison2016branch}.
 	
 	\subsubsection{Binary Branching}
-		Binary branching focuses on dividing $S$ from Algorithm 1 into two mutually exclusive sub-problems. This technique is commonly seen in problems like the knapsack problem which seeks a selection of items that maximize cost. In this case, we select some unassigned item and create two branches, one where the item is included in the set, and another where it is not. 
+		Binary branching focuses on dividing $S$ from Algorithm 1 into two mutually exclusive sub-problems. This technique is commonly seen in problems like the knapsack problem which seeks a selection of items that maximize cost. In this case, we select some unassigned item and create two branches, one where the item is included in the set, and another where it is not. This still leaves freedom of the user to choose specific branching conditions. For example, one might choose to branch dichotomously on the edges of the graph as in \cite{rendl2010solving} or on the vertices as in \cite{baccari2020verifying}.
 	
 	\subsubsection{Non-Binary Branching}
 		Non-binary branching focuses on selecting a singe element from a set of options. This is often used in problems such as the maximum cliques where a set of unused vertices is maintained for each sub-problem and each vertex generates a child set. Non-binary branching allows for potentially large reductions in the search tree by bypassing long sequences of sub problems. 
