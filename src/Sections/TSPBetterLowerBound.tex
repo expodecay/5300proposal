@@ -2,3 +2,44 @@
 %! Date = 11/17/2021
 
 \section{TSP Better Lower Bound}
+    There are problems like the traveling salesman problem in this example
+    that are easy to model using branch-and-bound but do not see too much improvements.
+    The reason BnB does not work well with TSP is because BnB relies on psudeo
+    parrallelism, BnB will choose to expand best possible path each time, and 
+    with a problem like TSP, the best possible path will almost always be the 
+    last expanded path. This makes the algorithm almost useless since you 
+    would expand almost every combination of tour, and esentially brute-force.
+    To combat this researchers have used heuristics, in hopes of making a better
+    choice for a lower bound.
+
+    \subsubsection{Creating a Better Lower Bound}
+    Firstly, our lower bound calculation before our heuristic is simply the sum 
+    of the tour edges. To improve this we will utilize an encoding scheme known as 
+    a graph adjacency matrix, and reduce it. There are two reasons for the reduction, 
+    the first is that reduction keeps track of our current state of the tour, and the second
+    is that the cost of reduction is an admissiable heuristic in the TSP problem.
+    After computing the reduction cost we can now make our lower bound calculation.
+    \begin{equation}
+        LB = LB_p + w(p, n) + R(M_n)
+    \end{equation}
+    Where $LB_p$ is the lower-bound of the parent, $w(p, n)$ is the weight of the edge
+    between the parent, and $R(M_n)$ is the cost of reduction. 
+    
+    It is important to realize that branch and bound is not one size fits all algorithm, so
+    although there maybe a problem that can be encoded with an adjacency matrix, it does not mean
+    there exist an admissiable heuristic for it. 
+
+   
+    \begin{vmatrix}
+        $\infty$ & 9 & 2 & 8\\
+        9 & $\infty$ & 7 & 3 \\
+        2 & 7 & $\infty$ & 4 \\
+        8 & 3 & 4 & $\infty$
+    \end{vmatrix}
+        %!c = 2 + 3 + 2 + 3
+    \begin{vmatrix}
+        $\infty$ & 7 & 0 & 6\\  
+        6 & $\infty$ & 4 & 0 \\
+        0 & 5 & $\infty$ & 2 \\
+        5 & 0 & 1 & $\infty$
+    \end{vmatrix}

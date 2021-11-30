@@ -5,23 +5,47 @@
     branch-and-bound are Integer Constraint Problems. 
     Integer Constraint Problems at their core are combinatorial 
     optimization problems, thus can be solved by branch-and-bound.
-    For this example we will use a system of equations problem,
+    For this example we will use a system of linear equations problem,
     apply an integer constraint, and show how it can be solved using 
-    branch-and-bound. 
+    branch-and-bound. In the example below we focus on the case of 
+    two equations, but this can be expanded and solved by branch-and-bound.
     \\ 
     \noindent
-	\textbf{\underline{System of Equations Problem}:}\\
-	\underline{Instance}: \\ $Z = 3x + 2y$  \\ $5x = 6y \leq 45$ \\ $4x + 7y \leq 42 $ \\
+	\textbf{\underline{System of Linear Equations Problem}:}\\
+	\underline{Instance}: \\ $Z = f(x,y)$  \\ $h(x,y) \leq c_1$ \\ $g(x,y) \leq c_2 $ \\
 	\underline{Question}: What is the best assignment of $x$ and $y$ such that $Z$ is maximized?
     \\
 
         \subsubsection{Creating an Upper-Bound}
         First thing we must notice about Integer Constraint problems is that
-        their solution space is smaller than their non-constrained counterparts.
+        their solution space is smaller than their continuous counterparts and 
+        is in fact a subset.
         We can exploit this and create an upper-bound. To create the upper bound
         we will relax the integer constraint and solve the relaxed problem.
-        Solving the system of equations we get the following: $x^{'} = 5.73$, $y^{'} = 2.73$, 
-        and $Z^{'} = 22.65$. We notice that the integer constraint solution
+        Solving the system of equations we get some optimimal values: $x^{'}$, $y^{'}$, 
+        and $Z^{'}$. We notice that the integer constraint solution
         space is a subset of the relaxed solution space, therefore the largest
         possible value of $Z$ when applying the integer constraint is 
-        $ Z = \lfloor Z^{'} \rfloor = 22$. This will now be our upper-bound ($UP$).
+        $ Z = \lfloor Z^{'} \rfloor$. This will now be our upper-bound ($UP$), which can be used
+        to find the optimimal solution.
+
+        \subsubsection{Combinations}
+        Now we need to turn our problem into a combinatorial optimization problem.
+        To do this, we need to notice that, graphically, the solution in the continuous space is at 
+        the intersection of the two lines. Therefore, when applying the integer constraint our
+        solution will be near the intercention. To generate all the solution combinations we will 
+        use two operations, the floor ($\lfloor \rfloor$) and ceiling ($\lceil \rceil$) operation. 
+        For example, take the solution pair in the continuous space $x^{'}$ and $y^{'}$,
+        applying the floor and ceiling,to each we get the canidate integer constraint solutions:  
+        $(\lceil x^{'} \rceil, \lceil y^{'} \rceil)$, $(\lfloor x^{'} \rfloor, \lceil y^{'} \rceil)$
+        $(\lceil x^{'} \rceil, \lfloor y^{'} \rfloor)$, $(\lfloor x^{'} \rfloor, \lfloor y^{'} \rfloor)$.
+        Each floor and ceil operation that we do will be a new constraint or equation on the problem,
+        and can be represented in the following form $x \leq c_i$ or $x \geq c_i$. 
+        Each time a new branch is created every previous constraint on that path is 
+        considered in the calculation of it's variables.
+
+        \subsubsection{Algorithm}
+        There are many ways to solve this problem using branch-and-bound.
+        One way is make an algorithm that utilizes a system of equations solver in the continuous space.
+        Then at each branch apply a new constraint/equation, and have the solver compute the maximum value.
+        
