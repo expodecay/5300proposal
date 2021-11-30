@@ -12,14 +12,15 @@
 		The general technique is to attempt pruning with a lower bound that is easy to calculate before moving on to more complex (but possibly tighter) lower bounds. 
 	\subsubsection{Upper-Bound}
 		Many problems have large solution spaces, and while a lower bound is helpful in narrowing
-		down a solution spaces, an upper-bound can narrow the solution space further.
+		down a solution space, an upper-bound can narrow the solution space further.
 		An upper-bound represents the upper limit of the solution space, it means that any
 		problem in the solution space can not be better than a given upper-bound.
 		Knowing the upper-bound of a problem instance can help cut down extra computation,
 		since if the bound is hit, we know we have an optimal solution, and we can stop
-		searching. It is important to mention that having an upperbound does not 
-		mean that there exist a solution that equals the upper bound, it simply means 
+		searching. It is important to mention that having an upper bound does not
+		mean that there exist a solution that equals the upper bound, it simply means
 		there can not be one better.
+
 		
 	\subsubsection{Alpha-Beta Pruning}
 		Alpha-beta pruning is often used in areas of artificial intelligence that employ a MinMax decision rule for minimizing the possible loss of a worst case scenario. 
