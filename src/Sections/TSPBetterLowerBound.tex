@@ -52,11 +52,11 @@
     \subsubsection{Creating a Better Lower Bound}
     Firstly, our lower-bound calculation before our heuristic is simply the sum 
     of the tour edges. To improve this we will utilize an encoding scheme known as 
-    a graph adjacency matrix, and reduce it. There are two reasons for the reduction, 
+    a graph adjacency matrix, and reduce it \cite{rastogi2013proposed}. There are two reasons for the reduction, 
     the first is that reduction keeps track of our current state of the tour, and the second
     is that the cost of reduction is an admissible heuristic in the TSP problem.
     The idea is that the cost of reduction is equal to the shortest possible edges left to
-    take on the graph. Note, the shortest edges do not have to be constrained to the tour, they
+    take on the graph \cite{rastogi2013proposed}. Note, the shortest edges do not have to be constrained to the tour, they
     are just simply the shortest edges coming out of each node. To compute the reduction, take the
     shortest number in each row, then subtract it from each element, finally sum the shortest edges.
     The output matrix becomes the new state of the child branch and used to compute it's lower-bound.\\
